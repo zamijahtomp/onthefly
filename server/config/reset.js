@@ -179,7 +179,7 @@ const resetDatabase = async () => {
   await createActivitiesTable()
   await createTripsDestinationsTable()
   await createUsersTable()
-  await creat
+  await createTripsUsersTable()
 }
 
 resetDatabase()
