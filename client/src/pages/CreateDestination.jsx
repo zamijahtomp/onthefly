@@ -26,7 +26,7 @@ const CreateDestination = () => {
             body: JSON.stringify(destination)
         }
 
-        await fetch('http://localhost:3001/api/destinations', options)
+        await fetch(`${api_url}/api/destinations`, options)
         window.location.href = '/destinations'
     }
 

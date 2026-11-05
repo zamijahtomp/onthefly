@@ -29,7 +29,7 @@ const CreateActivity = () => {
             body: JSON.stringify(activity)
         }
 
-        fetch('http://localhost:3001/api/activities/' + trip_id, options)
+        fetch(`${api_url}/api/activities/` + trip_id, options)
         window.location.href = '/'
     }
 

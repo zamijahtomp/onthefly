@@ -26,7 +26,7 @@ const CreateTrip = () => {
             body: JSON.stringify(trip)
         }
 
-        fetch('http://localhost:3001/api/trips', options)
+        fetch(`${api_url}/api/trips`, options)
         window.location.href = '/'
     }
 

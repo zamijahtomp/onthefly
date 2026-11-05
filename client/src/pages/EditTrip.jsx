@@ -35,7 +35,7 @@ const EditTrip = ({data}) => {
             body: JSON.stringify(trip)
         }
 
-        fetch('http://localhost:3001/api/trips/' + id, options)
+        fetch(`${api_url}/api/trips/${id}`, options)
         window.location.href = '/'
     }
 
@@ -46,7 +46,7 @@ const EditTrip = ({data}) => {
             method: 'DELETE'
         }
 
-        fetch('http://localhost:3001/api/trips/' + id, options)
+        fetch(`${api_url}api/trips/${id}`, options)
         window.location.href = '/'
     }
 

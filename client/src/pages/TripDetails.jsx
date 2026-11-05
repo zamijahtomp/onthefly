@@ -16,13 +16,13 @@ const TripDetails = ({data}) => {
         setPost({id: parseInt(result.id), title: result.title, description: result.description, img_url: result.img_url, num_days: parseInt(result.num_days), start_date: result.start_date.slice(0,10), end_date: result.end_date.slice(0,10), total_cost: result.total_cost});
 
         const fetchActivities = async () => {
-            const response = await fetch('http://localhost:3001/api/activities/' + id)
+            const response = await fetch(`${api_url}/api/activities/${id}`)
             const data = await response.json()
             setActivities(data)
         }
 
         const fetchDestinations = async () => {
-            const response = await fetch('http://localhost:3001/api/trips-destinations/destinations/' + id)
+            const response = await fetch(`${api_url}/api/trips-destinations/destinations/${id}`)
             const data = await response.json()
             setDestinations(data)
         }
