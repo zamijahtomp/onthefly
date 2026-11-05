@@ -10,6 +10,7 @@ import TripDetails from './pages/TripDetails'
 import CreateActivity from './pages/CreateActivity';
 import AddToTrip from './pages/AddToTrip';
 import Login from './pages/Login';
+import Avatar from './components/Avatar';
 
 const API_URL = 'http://localhost:3001'
 
@@ -107,6 +108,7 @@ const App = () => {
                     <Link to='/trip/new'><button className='headerBtn'> + Add Trip </button></Link>
                     <Link to="/destination/new"><button className="headerBtn"> + Add Destination </button></Link>
                     <button onClick={logout} className='headerBtn'>Logout</button>
+                    <Avatar className='avatar' user={user} />
                 </div>
             : <></>
         }
