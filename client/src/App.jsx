@@ -12,7 +12,7 @@ import AddToTrip from './pages/AddToTrip';
 import Login from './pages/Login';
 import Avatar from './components/Avatar';
 
-const API_URL = 'http://localhost:3001'
+const API_URL = import.meta.env.PROD ? 'https://server-9vst.onrender.com' : '/api'
 
 const App = () => {
   

@@ -8,17 +8,23 @@ import { GitHub } from './config/auth.js'
 import authRoutes from './routes/auth.js'
 
 const app = express()
+app.set('trust proxy', 1)
+
 
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://client-9sjm.onrender.com',
     methods: 'GET,POST,PUT,DELETE,PATCH',
     credentials: true
 }))
 app.use(session({
     secret: process.env.SESSION_SECRET || 'dev-only-secret',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        sameSite: 'none',
+        secure: true
+    }
 }))
 
 app.use(passport.initialize())
